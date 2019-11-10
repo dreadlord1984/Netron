@@ -1,69 +1,34 @@
 
-<p align='center'><img width='400' src='media/logo.png'/></p>
+<p align='center'><a href='https://github.com/lutzroeder/netron'><img width='400' src='media/logo.png'/></a></p>
 
-Netron is a viewer for neural network models.
+Netron is a viewer for neural network, deep learning and machine learning models. 
 
-Netron loads **[ONNX](http://onnx.ai)** models (`.onnx` or `.pb`), **Keras** models (`.keras`, `.h5` or `.json`) and **TensorFlow Lite** models (`.tflite`) and has experimental support for **TensorFlow** models (`.pb` and `.meta`).
+Netron supports **ONNX** (`.onnx`, `.pb`, `.pbtxt`), **Keras** (`.h5`, `.keras`), **Core ML** (`.mlmodel`), **Caffe** (`.caffemodel`, `.prototxt`), **Caffe2** (`predict_net.pb`, `predict_net.pbtxt`), **MXNet** (`.model`, `-symbol.json`), **NCNN** (`.param`) and **TensorFlow Lite** (`.tflite`).
+
+Netron has experimental support for **TorchScript** (`.pt`, `.pth`), **PyTorch** (`.pt`, `.pth`), **Torch** (`.t7`), **Arm NN** (`.armnn`), **BigDL** (`.bigdl`, `.model`), **Chainer**, (`.npz`, `.h5`), **CNTK** (`.model`, `.cntk`), **Deeplearning4j** (`.zip`), **Darknet** (`.cfg`), **ML.NET** (`.zip`), **MNN** (`.mnn`), **OpenVINO** (`.xml`), **PaddlePaddle** (`.zip`, `__model__`), **scikit-learn** (`.pkl`), **TensorFlow.js** (`model.json`, `.pb`) and **TensorFlow** (`.pb`, `.meta`, `.pbtxt`).
 
 <p align='center'><a href='https://www.lutzroeder.com/ai'><img src='media/screenshot.png' width='800'></a></p>
 
 ## Install
 
-**macOS**
+**macOS**: [**Download**](https://github.com/lutzroeder/netron/releases/latest) the `.dmg` file or run `brew cask install netron`
 
-[**Download**](https://github.com/lutzroeder/Netron/releases/latest) the `.dmg` file or with [Homebrew](https://caskroom.github.io) run `brew cask install netron`
+**Linux**: [**Download**](https://github.com/lutzroeder/netron/releases/latest) the `.AppImage`, `.deb` file or run `snap install netron` 
 
-**Linux**
+**Windows**: [**Download**](https://github.com/lutzroeder/netron/releases/latest) the `.exe` installer.
 
-[**Download**](https://github.com/lutzroeder/Netron/releases/latest) the `.AppImage` or `.deb` file. The `.AppImage` needs to be made [executable](http://discourse.appimage.org/t/how-to-make-an-appimage-executable/80) after download.
+**Browser**: [**Start**](https://www.lutzroeder.com/ai/netron) the browser version.
 
-**Windows**
-
-[**Download**](https://github.com/lutzroeder/Netron/releases/latest) the `.exe` file.
+**Python Server**: Run `pip install netron` and `netron [FILE]` or `import netron; netron.start('[FILE]')`.
 
 ## Download Models
 
-Below are a few model files you can download and open:
+Sample model files to download and open:
 
-**ONNX Models**
-
-* [Inception v1](https://github.com/onnx/models/blob/master/inception_v1)
-* [Inception v2](https://github.com/onnx/models/blob/master/inception_v2)
-* [ResNet-50](https://github.com/onnx/models/blob/master/resnet50)
-* [ShuffleNet](https://github.com/onnx/models/blob/master/shufflenet)
-* [SqueezeNet](https://github.com/onnx/models/blob/master/squeezenet)
-* [VGG-19](https://github.com/onnx/models/blob/master/vgg19)
-* [BVLC AlexNet](https://github.com/onnx/models/blob/master/bvlc_alexnet)
-
-**TensorFlow Lite Models**
-
-* [Smart Reply 1.0 ](https://storage.googleapis.com/download.tensorflow.org/models/tflite/smartreply_1.0_2017_11_01.zip)
-* [Mobilenet 1.0 224 Float](https://storage.googleapis.com/download.tensorflow.org/models/tflite/mobilenet_v1_1.0_224_float_2017_11_08.zip)
-* [Inception v3 2015](https://storage.googleapis.com/download.tensorflow.org/models/tflite/inception_v3_2015_2017_11_10.zip)
-* [Inception v3 2016 Slim](https://storage.googleapis.com/download.tensorflow.org/models/tflite/inception_v3_slim_2016_android_2017_11_10.zip)
-
-**TensorFlow models**
-
-* [Inception v3](https://storage.googleapis.com/download.tensorflow.org/models/inception_v3_2016_08_28_frozen.pb.tar.gz)
-* [Inception v4](https://storage.googleapis.com/download.tensorflow.org/models/inception_v4_2016_09_09_frozen.pb.tar.gz)
-* [Inception 5h](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
-
-## Install Python Model Server 
-
-To run Netron in a web browser, install the Python web server using pip: 
-```
-pip install netron
-```
-
-Launch the model server:
-
-```
-netron my_model.onnx
-```
-
-To serve a model from Python code:
-```
-import netron
-
-netron.serve_file('my_model.onnx')
-```
+ * **ONNX**: [resnet-18](https://s3.amazonaws.com/onnx-model-zoo/resnet/resnet18v1/resnet18v1.onnx)
+ * **Keras**: [tiny-yolo-voc](https://github.com/hollance/YOLO-CoreML-MPSNNGraph/raw/master/Convert/yad2k/model_data/tiny-yolo-voc.h5)
+ * **CoreML**: [faces_model](https://github.com/NovaTecConsulting/FaceRecognition-in-ARKit/files/1526806/faces_model.mlmodel.zip) 
+ * **TensorFlow Lite**: [smartreply](https://storage.googleapis.com/download.tensorflow.org/models/tflite/smartreply_1.0_2017_11_01.zip)
+ * **MXNet**: [inception_v1](https://s3.amazonaws.com/model-server/models/onnx-inception_v1/inception_v1.model)
+ * **Caffe**: [mobilenet_v2](https://raw.githubusercontent.com/shicai/MobileNet-Caffe/master/mobilenet_v2.caffemodel)
+ * **TensorFlow**: [inception_v3](https://storage.googleapis.com/download.tensorflow.org/models/inception_v3_2016_08_28_frozen.pb.tar.gz)

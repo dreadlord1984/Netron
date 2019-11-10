@@ -1,0 +1,24 @@
+{
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 2015,
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": [ "error", 4 ],
+        "linebreak-style": [ "error", "unix" ],
+        "brace-style": [ "error", "stroustrup", { "allowSingleLine": true } ]
+    },
+    "overrides": [
+      { "files": ["src/*-proto.js"], "rules": { "brace-style": "off" } },
+      { "files": ["src/*-schema.js"], "rules": { "indent": "off" } }
+    ],
+    "globals": {
+        "protobuf": "readonly"
+    }
+}
